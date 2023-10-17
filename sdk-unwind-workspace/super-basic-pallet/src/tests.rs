@@ -6,10 +6,7 @@
 //! Mock runtime environment and tests for the Super Basic pallet.
 
 use crate::*;
-use frame_support::{
-	assert_ok,
-	traits::ConstU64,
-};
+use frame_support::{assert_ok, traits::ConstU64};
 use sp_core::H256;
 // The testing primitives are very useful for avoiding having to work with signatures
 // or public keys. `u64` is used as the `AccountId` and no `Signature`s are required.
@@ -114,10 +111,10 @@ fn accumulate_dummy_works() {
 #[test]
 fn kill_dummy_works() {
 	new_test_ext().execute_with(|| {
-        // we know there is the value Som(42) in storage
+		// we know there is the value Som(42) in storage
 		assert_eq!(Example::dummy(), Some(42));
-        // construct and dispatch the call with root origin
-        assert_ok!(Example::kill_dummy(RuntimeOrigin::root()));
+		// construct and dispatch the call with root origin
+		assert_ok!(Example::kill_dummy(RuntimeOrigin::root()));
 		assert_eq!(Example::dummy(), None);
 	});
 }

@@ -1,9 +1,11 @@
 //! # Super basic Pallet
 //!
-//! A pallet in `dev_mode` with minimal functionality to demonstrate basic patterns for writing a FRAME pallet.
-//! 
+//! A pallet in `dev_mode` with minimal functionality to demonstrate basic patterns for writing a
+//! FRAME pallet.
+//!
 //! These include:
-//! - Different pallet parts such as: the `Config` trait, storage, genesis config, genesis build, and calls.
+//! - Different pallet parts such as: the `Config` trait, storage, genesis config, genesis build,
+//!   and calls.
 //! - Using a mock runtime to write unit tests for the callable logic a pallet exposes.
 
 // We make sure this pallet uses `no_std` for compiling to Wasm.
@@ -36,7 +38,7 @@ pub mod pallet {
 	pub trait Config: pallet_balances::Config + frame_system::Config {}
 
 	/// ** STORAGE **
-    /// A single value storage item that stores some Balance.
+	/// A single value storage item that stores some Balance.
 	#[pallet::storage]
 	#[pallet::getter(fn dummy)]
 	pub(super) type Dummy<T: Config> = StorageValue<_, T::Balance>;
@@ -58,8 +60,8 @@ pub mod pallet {
 	}
 
 	/// ** PALLET CALL BLOCK **
-    /// Your pallet's callable functions go here.
-    /// Note: because we are using dev_mode, we don't need to care about weights or call indices.
+	/// Your pallet's callable functions go here.
+	/// Note: because we are using dev_mode, we don't need to care about weights or call indices.
 	#[pallet::call]
 	impl<T: Config> Pallet<T> {
 		pub fn accumulate_dummy(origin: OriginFor<T>, increase_by: T::Balance) -> DispatchResult {
