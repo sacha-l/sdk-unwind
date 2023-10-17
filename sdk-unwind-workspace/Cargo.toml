@@ -1,0 +1,8 @@
+[workspace.package]
+authors = ["Sacha Lansky"]
+edition = "2021"
+repository = "https://github.com/sacha-l/sdk-unwind"
+license = "Apache-2.0"
+
+[workspace]
+members = []
