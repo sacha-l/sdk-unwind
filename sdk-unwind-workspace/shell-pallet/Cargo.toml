@@ -1,0 +1,16 @@
+[package]
+name = "shell-pallet"
+version = "0.1.0"
+description = "A bare bones FRAME pallet for learning purposes, useful as a starting point for creating a new pallet."
+authors.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+frame-support = "24.0.0"
+frame-system = "24.0.0"
+parity-scale-codec = "3.6.5"
+scale-info = "2.9.0"

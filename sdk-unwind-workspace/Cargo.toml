@@ -5,4 +5,7 @@ repository = "https://github.com/sacha-l/sdk-unwind"
 license = "Apache-2.0"
 
 [workspace]
-members = ["super-basic-pallet"]
+members = [
+    "super-basic-pallet",
+    "shell-pallet"
+]
