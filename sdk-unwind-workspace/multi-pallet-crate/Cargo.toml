@@ -1,0 +1,25 @@
+[package]
+name = "multi-pallet-crate"
+version = "0.1.0"
+description = "A demo of the material covered in episode 3."
+authors.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+frame-support = "24.0.0"
+frame-system = "24.0.0"
+parity-scale-codec = "3.6.5"
+scale-info = "2.9.0"
+
+[features]
+default = ["std"]
+std = [
+    "parity-scale-codec/std",
+    "scale-info/std",
+    "frame-support/std",
+    "frame-system/std",
+]

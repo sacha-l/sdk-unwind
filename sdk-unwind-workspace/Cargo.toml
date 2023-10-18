@@ -7,5 +7,6 @@ license = "Apache-2.0"
 [workspace]
 members = [
     "super-basic-pallet",
-    "shell-pallet"
+    "shell-pallet",
+    "multi-pallet-crate",
 ]

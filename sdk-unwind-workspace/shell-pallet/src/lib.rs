@@ -5,7 +5,7 @@
 //! Jump into the
 //! [`pallet` attribute macro docs](https://paritytech.github.io/polkadot-sdk/master/frame_support/attr.pallet.html)
 //! to learn about the additional attributes available.
-//! 
+//!
 //! Note: this pallet is for learning purposes only and is not meant to be used in production.
 
 // We make sure this pallet uses `no_std` for compiling to Wasm.
