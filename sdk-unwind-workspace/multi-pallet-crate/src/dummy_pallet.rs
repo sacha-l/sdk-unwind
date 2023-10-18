@@ -17,7 +17,6 @@ pub use pallet::*;
 /// The Balance type for this pallet.
 pub type Balance = u128;
 
-
 #[frame_support::pallet(dev_mode)]
 pub mod pallet {
 	// Import various useful types required by all FRAME pallets.
@@ -34,13 +33,13 @@ pub mod pallet {
 	#[pallet::config]
 	pub trait Config: frame_system::Config {}
 
-    /// ** STORAGE **
+	/// ** STORAGE **
 	/// A single value storage item that stores some Balance.
 	#[pallet::storage]
 	#[pallet::getter(fn dummy)]
 	pub(super) type Dummy<T: Config> = StorageValue<_, Balance>;
 
-    /// ** PALLET CALL BLOCK **
+	/// ** PALLET CALL BLOCK **
 	/// Your pallet's callable functions go here.
 	/// Note: because we are using dev_mode, we don't need to care about weights or call indices.
 	#[pallet::call]
