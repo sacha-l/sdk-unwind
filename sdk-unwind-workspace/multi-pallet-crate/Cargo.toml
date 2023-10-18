@@ -14,6 +14,9 @@ frame-support = "24.0.0"
 frame-system = "24.0.0"
 parity-scale-codec = "3.6.5"
 scale-info = "2.9.0"
+sp-core = "24.0.0"
+sp-runtime = "27.0.0"
+
 
 [features]
 default = ["std"]
@@ -21,5 +24,5 @@ std = [
     "parity-scale-codec/std",
     "scale-info/std",
     "frame-support/std",
-    "frame-system/std",
+    "frame-system/std"
 ]
